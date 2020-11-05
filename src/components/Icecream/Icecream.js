@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './Icecream.css';
 import IcecreamIngredient from './IcecreamIngredient/IcecreamIngredient';
 
-const burger = ( props ) => {
+const icecream = ( props ) => {
     let transformedIngredients = Object.keys( props.ingredients )
         .map( igKey => {
             return [...Array( props.ingredients[igKey] )].map( ( _, i ) => {
@@ -17,11 +17,22 @@ const burger = ( props ) => {
         transformedIngredients = <p>Please start adding ingredients!</p>;
     }
     return (
-        <div className={classes.Burger}>
+        <div classname={classes.floatcontainer}>
+            <div className={classes.floatLeft}>
+            
+            <h1> Welcome to the icecream builder!
+            With this, you can build your own icecream!
+            The pricing will be displayed.
+            Press Checkout to order your icecream!
+             </h1></div>
+             
+            <div className={classes.Icecream}>
             {transformedIngredients}
             <IcecreamIngredient type="cone" />
+            
+            </div>
         </div>
     );
 };
 
-export default burger;
+export default icecream;
