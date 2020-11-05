@@ -8,10 +8,9 @@ import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import axios from "../../axios-orders";
 
 const INGREDIENT_PRICES = {
-  salad: 0.5,
-  cheese: 0.4,
-  meat: 1.3,
-  bacon: 0.7,
+  strawberryScoop: 1.0,
+  chocolateSauce: 0.3,
+  chocolateScoop: 1.0,
 };
 
 class BurgerBuilder extends Component {
@@ -21,12 +20,11 @@ class BurgerBuilder extends Component {
   // }
   state = {
     ingredients: {
-      salad: 0,
-      bacon: 0,
-      cheese: 0,
-      meat: 0,
+      chocolateScoop: 0,
+      strawberryScoop: 0,
+      chocolateSauce: 0,
     },
-    totalPrice: 4,
+    totalPrice: 2,
     purchasable: false,
     purchasing: false,
   };
