@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 import Aux from "../../hoc/Auxilliary";
-import Burger from "../../components/Burger/Burger";
-import BuildControls from "../../components/Burger/BuildControls/BuildControls";
+import Icecream from "../../components/Icecream/Icecream";
+import BuildControls from "../../components/Icecream/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
-import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
+import OrderSummary from "../../components/Icecream/OrderSummary/OrderSummary";
 import axios from "../../axios-orders";
 
 const INGREDIENT_PRICES = {
@@ -13,7 +13,7 @@ const INGREDIENT_PRICES = {
   chocolateScoop: 1.0,
 };
 
-class BurgerBuilder extends Component {
+class IcecreamBuilder extends Component {
   // constructor(props) {
   //     super(props);
   //     this.state = {...}
@@ -119,7 +119,7 @@ class BurgerBuilder extends Component {
             purchaseContinued={this.purchaseContinueHandler}
           />
         </Modal>
-        <Burger ingredients={this.state.ingredients} />
+        <Icecream ingredients={this.state.ingredients} />
         <BuildControls
           ingredientAdded={this.addIngredientHandler}
           ingredientRemoved={this.removeIngredientHandler}
@@ -133,4 +133,4 @@ class BurgerBuilder extends Component {
   }
 }
 
-export default BurgerBuilder;
+export default IcecreamBuilder;

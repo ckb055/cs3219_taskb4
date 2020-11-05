@@ -8,6 +8,7 @@
   border-radius: 0 0 30px 30px;
   box-shadow: inset -15px 0 #ebc1a6;
   margin: 2% auto;
+  margin-top: -5px;
   background: repeating-linear-gradient(
     45deg,
     burlywood,
